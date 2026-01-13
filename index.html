@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI多角色朗读工具包下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .tool-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .tool-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, #2980b9, #1c5a7a);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+        
+        .video-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 宽高比 */
+            height: 0;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎧 AI多角色朗读工具包</h1>
+            <p class="subtitle">三款工具协同工作，实现智能语音朗读体验</p>
+        </header>
+        
+        <div class="tools-grid">
+            <!-- H·TTS Server 下载 -->
+            <div class="tool-card">
+                <div class="tool-icon">🎵</div>
+                <h2 class="tool-title">H·TTS Server</h2>
+                <p class="tool-description">
+                    高级语音合成服务器，支持自动分配角色声音、合并多个角色、固定发音人配置等进阶功能，为阅读K提供语音支持。
+                </p>
+                <a href="https://cnb.cool/mingwuyan/yinpin/-/git/raw/main/H%C2%B7TTS%20Server(%E7%B2%BE%E7%AE%80%E6%97%A5%E5%BF%97)2.apk?download=true" 
+                   class="download-btn" 
+                   download="H·TTS Server.apk">
+                    📥 下载 H·TTS Server
+                </a>
+            </div>
+            
+            <!-- 阅读K 下载 -->
+            <div class="tool-card">
+                <div class="tool-icon">📖</div>
+                <h2 class="tool-title">阅读K</h2>
+                <p class="tool-description">
+                    开源阅读工具增强版，配合H·TTS Server实现多角色智能朗读，版本号3.25.122816，优化了语音合成体验。
+                </p>
+                <a href="https://cnb.cool/mingwuyan/yinpin/-/git/raw/main/%E9%98%85%E8%AF%BB%E2%80%A2K%20%5B3.25.122816%5D.apk?download=true" 
+                   class="download-btn" 
+                   download="阅读K.apk">
+                    📥 下载 阅读K
+                </a>
+            </div>
+            
+            <!-- 密钥获取工具 -->
+            <div class="tool-card">
+                <div class="tool-icon">🔑</div>
+                <h2 class="tool-title">密钥获取工具</h2>
+                <p class="tool-description">
+                    用于获取智谱清言API密钥，首次使用H·TTS Server时需要填写密钥，版本v1.0.1。
+                </p>
+                <a href="https://cnb.cool/mingwuyan/yinpin/-/git/raw/main/%E5%AF%86%E9%92%A5%E8%8E%B7%E5%8F%96_v1.0.1.apk?download=true" 
+                   class="download-btn" 
+                   download="密钥获取工具.apk">
+                    📥 下载 密钥工具
+                </a>
+            </div>
+        </div>
+        
+        <!-- 视频教程 -->
+        <div class="video-section">
+            <h2 style="color: #2c3e50; margin-bottom: 10px;">🎬 视频教程</h2>
+            <p style="color: #666; margin-bottom: 20px;">观看完整安装和使用教程，了解如何配置和使用这些工具</p>
+            
+            <div class="video-container">
+                <iframe src="https://player.bilibili.com/player.html?bvid=BV1UMv9BJE4u&autoplay=0" 
+                        scrolling="no" 
+                        border="0" 
+                        frameborder="no" 
+                        framespacing="0" 
+                        allowfullscreen="true">
+                </iframe>
+            </div>
+            
+            <p style="margin-top: 15px; text-align: center;">
+                <a href="https://m.bilibili.com/video/BV1UMv9BJE4u" 
+                   target="_blank" 
+                   style="color: #3498db; text-decoration: none; font-weight: 500;">
+                    🔗 在B站App中打开此视频
+                </a>
+            </p>
+        </div>
+        
+        <div class="instructions">
+            <h3>使用说明：</h3>
+            <ol>
+                <li>按顺序下载三个工具：密钥获取工具 → H·TTS Server → 阅读K</li>
+                <li>先运行密钥获取工具获取API密钥</li>
+                <li>打开H·TTS Server，填入获取的API密钥</li>
+                <li>最后打开阅读K，在设置中配置TTS服务器地址</li>
+                <li>观看上方视频获取详细配置教程</li>
+            </ol>
+        </div>
+        
+        <footer>
+            <p>© 2024 AI朗读工具包 | 仅供学习交流使用</p>
+            <p style="font-size: 0.8rem; margin-top: 5px;">下载的文件为Android APK格式，请在Android设备上安装使用</p>
+        </footer>
+    </div>
+</body>
+</html>
